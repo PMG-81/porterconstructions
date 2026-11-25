@@ -1,0 +1,1 @@
+import {json} from './_shared.js';export function onRequestGet({env}){return json({preview:false,url:env.SUPABASE_URL||'',anon:env.SUPABASE_ANON_KEY||'',turnstileSiteKey:env.TURNSTILE_SITE_KEY||''});}

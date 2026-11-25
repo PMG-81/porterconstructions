@@ -1,0 +1,1 @@
+import {json,rows} from './_shared.js';export async function onRequestGet({env}){try{const result={};for(const k of ['projects','services','industries','testimonials','careers','settings'])result[k]=await rows(env,k,env.SUPABASE_ANON_KEY);return json(result);}catch{return json({error:'Content unavailable'},503);}}
